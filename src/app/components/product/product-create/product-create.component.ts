@@ -19,8 +19,8 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   product: Product = {
-    name: 'Teste',
-    price: 123.56
+    name: '',
+    price: 0
   }
 
   createProduct(): void {
