@@ -1,0 +1,14 @@
+.acoes {
+   cursor: pointer;
+   display: flex;
+   gap: 6px;
+}
+
+.edit {
+    color: #d9cd26;
+    margin-right: 7px;
+}
+
+.delete {
+    color: #e35e6b ;
+}

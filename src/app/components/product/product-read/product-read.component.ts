@@ -8,7 +8,9 @@ import { Product } from '../interface/product';
   styleUrls: ['./product-read.component.css']
 })
 export class ProductReadComponent implements OnInit {
+
   products: Product[] = []
+  displayedColumns: string[] = ['id', 'name', 'price', 'action'];
 
   constructor(
     private productService: ProductService
@@ -21,7 +23,10 @@ export class ProductReadComponent implements OnInit {
   getProduct = () => {
     this.productService.read().subscribe((product) => {
       this.products = product
-      console.log(this.products)
     })
+  }
+
+  delete(productId: any){
+    console.log('deleting...', productId)
   }
 }
