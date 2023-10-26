@@ -18,6 +18,8 @@ export class ProductCreateComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  headerTitle: string = "new product"
+  
   product: Product = {
     name: '',
     price: 0

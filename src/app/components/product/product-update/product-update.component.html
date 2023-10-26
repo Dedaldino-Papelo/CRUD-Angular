@@ -1,15 +1,1 @@
-<h1>edit product</h1>
-<form class="form" *ngIf="product">
-    <mat-form-field class="example-full-width">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Name" [(ngModel)]="product.name" name="name">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Price</mat-label>
-      <input type="number" min="1" matInput placeholder="Price" [(ngModel)]="product.price" name="price">
-    </mat-form-field>
-
-    <button mat-raised-button (click)="updateProduct()" color="primary">update</button>
-    <button mat-raised-button (click)="cancel()">cancel</button>
-  </form>
+<app-form [title]="headerTitle"></app-form>

@@ -10,6 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductUpdateComponent implements OnInit {
 
+  headerTitle: string = "edit product"
   product!: Product
   
   constructor(
