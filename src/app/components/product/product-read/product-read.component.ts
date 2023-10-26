@@ -29,6 +29,9 @@ export class ProductReadComponent implements OnInit {
   }
 
   onDelete(productId: any){
-    this.productService.delete(productId).subscribe()
+    this.productService.delete(productId)
+      .subscribe(() => {
+        this.productService.showMessage("Product Deleted")
+      })
   }
 }
