@@ -11,6 +11,7 @@ import { ProductService } from '../product.service';
 export class ProductUpdateComponent implements OnInit {
 
   headerTitle: string = "edit product"
+  buttonTxt: string = "update"
   product!: Product
   
   constructor(
@@ -27,7 +28,11 @@ export class ProductUpdateComponent implements OnInit {
    })
   }
 
-  updateProduct(): void {
+  updateProduct(items: any): void {
+    const { name, price } = items
+    this.product.name = name
+    this.product.price = price
+    
     this.productService.update(this.product)
       .subscribe(()=> {
         this.productService.showMessage('Product Successfully updated')

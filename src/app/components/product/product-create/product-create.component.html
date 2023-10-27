@@ -1,2 +1,5 @@
-<app-form [title]="headerTitle"></app-form>
-
+<app-form 
+    [title]="headerTitle"
+    [txtButton]="buttonTxt" 
+    (createProductEvent)="createProduct($event)">
+</app-form>

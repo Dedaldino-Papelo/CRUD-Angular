@@ -1,1 +1,7 @@
-<app-form [title]="headerTitle"></app-form>
+<app-form 
+    [title]="headerTitle"
+    [txtButton]="buttonTxt"
+    (createProductEvent)="updateProduct($event)"
+    [ProductToUpdate]="product"
+>
+</app-form>

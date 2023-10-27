@@ -19,13 +19,18 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   headerTitle: string = "new product"
+  buttonTxt: string = "save"
   
   product: Product = {
     name: '',
     price: 0
   }
 
-  createProduct(): void {
+  createProduct(items: any): void {
+    const { name, price } = items
+    this.product.name = name
+    this.product.price = price
+
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Successfully created')
       this.router.navigate(['/products'])
