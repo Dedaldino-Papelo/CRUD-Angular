@@ -7,7 +7,6 @@
       placeholder="Name"
       name="name"
       [(ngModel)]="ProductToUpdate.name"
-      #name
     />
   </mat-form-field>
 
@@ -19,13 +18,12 @@
       matInput
       name="price"
       [(ngModel)]="ProductToUpdate.price"
-      #price
     />
   </mat-form-field>
 
   <button
     mat-raised-button
-    (click)="createProduct(name.value, price.value)"
+    (click)="createProduct()"
     color="primary"
   >
     {{ txtButton }}

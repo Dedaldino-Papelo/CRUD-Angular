@@ -9,7 +9,7 @@ import { Product } from '../../product/interface/product';
 export class AppFormComponent implements OnInit {
   @Input() title: string = ""
   @Input() txtButton: string = ""
-  @Input() ProductToUpdate!: Product
+  @Input() ProductToUpdate: Product = {name: '', price: 0}
   
   @Output() createProductEvent = new EventEmitter<any>();
   
@@ -18,8 +18,7 @@ export class AppFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createProduct(name: string, price: string) {
-    const items = { name, price }
-    this.createProductEvent.emit(items)
+  createProduct() {
+    this.createProductEvent.emit(this.ProductToUpdate)
   }
 }
